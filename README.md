@@ -1,4 +1,6 @@
 # Vibhuti Sharma  
+<img width="251" height="370" alt="Screenshot 2026-02-16 at 9 22 21 PM" src="https://github.com/user-attachments/assets/56f5384d-3738-43dd-a349-6cdce0c59743" />
+
 **MBA Candidate | Digital Marketing Strategist | Marketing Analytics Professional**  
 University Canada West (2024–2026)  
 Email: vibhutisharma@gmail.com  
