@@ -1,0 +1,187 @@
+/* ===== GitHub Pages Portfolio CSS (Times New Roman + colored heading boxes) ===== */
+/* Paste this into your GitHub Pages CSS file (e.g., assets/css/style.css) */
+
+:root{
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --border: rgba(31,41,55,0.12);
+
+  /* Heading box colors */
+  --h1bg: #0f3d57;   /* deep teal */
+  --h2bg: #1e5aa8;   /* royal blue */
+  --h3bg: #2f7a6d;   /* green-teal */
+  --h4bg: #6b4fa1;   /* violet */
+
+  --accent: #ffb703; /* warm highlight */
+  --shadow: 0 12px 28px rgba(0,0,0,0.08);
+  --radius: 14px;
+}
+
+/* Page base */
+html, body{
+  background: radial-gradient(1200px 600px at 15% 0%, #e8f0ff 0%, transparent 55%),
+              radial-gradient(900px 500px at 85% 10%, #e9fff7 0%, transparent 50%),
+              var(--bg);
+  color: var(--text);
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+/* Main content container (works with most GitHub Pages themes) */
+main, .markdown-body, .container, .wrapper, .page-content{
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+/* Subtle card feel for the markdown body (if theme supports .markdown-body) */
+.markdown-body, main{
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.86));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+/* Links */
+a{
+  color: #0b5ed7;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(11,94,215,0.45);
+}
+a:hover{
+  border-bottom-style: solid;
+  color: #084298;
+}
+
+/* Paragraphs + lists */
+p{ color: var(--text); margin: 0.7em 0; }
+ul, ol{ margin: 0.6em 0 0.9em 1.2em; }
+li{ margin: 0.35em 0; }
+
+/* ===== Heading + Subheading: colored background boxes ===== */
+h1, h2, h3, h4, h5, h6{
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 0.2px;
+  margin: 1.25em 0 0.7em;
+  position: relative;
+}
+
+/* General box styling */
+h1, h2, h3, h4{
+  color: #fff !important;
+  padding: 14px 16px;
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  overflow: hidden;
+}
+
+/* Decorative accent strip */
+h1::before, h2::before, h3::before, h4::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.15));
+}
+
+/* Subtle diagonal shine */
+h1::after, h2::after, h3::after, h4::after{
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -60px;
+  width: 180px;
+  height: 180px;
+  transform: rotate(18deg);
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 60%);
+  pointer-events: none;
+}
+
+/* Individual heading colors */
+h1{ background: linear-gradient(135deg, var(--h1bg), #0a2534); font-size: 2.05em; }
+h2{ background: linear-gradient(135deg, var(--h2bg), #123a6b); font-size: 1.55em; }
+h3{ background: linear-gradient(135deg, var(--h3bg), #1f5048); font-size: 1.25em; }
+h4{ background: linear-gradient(135deg, var(--h4bg), #3f2c63); font-size: 1.10em; }
+
+/* h5/h6 kept simple but styled */
+h5, h6{
+  color: var(--text);
+  padding-left: 10px;
+  border-left: 4px solid var(--accent);
+}
+
+/* Horizontal rule */
+hr{
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(31,41,55,0.25), transparent);
+  margin: 22px 0;
+}
+
+/* Blockquotes */
+blockquote{
+  margin: 1em 0;
+  padding: 14px 16px;
+  border-left: 6px solid var(--accent);
+  background: rgba(255, 183, 3, 0.10);
+  border-radius: 12px;
+  color: var(--muted);
+}
+
+/* Code blocks */
+pre, code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+pre{
+  background: #0b1220;
+  color: #e5e7eb;
+  padding: 14px 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+code{
+  background: rgba(15,61,87,0.10);
+  padding: 0.15em 0.35em;
+  border-radius: 8px;
+}
+
+/* Tables */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 18px;
+  background: rgba(255,255,255,0.75);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+th, td{
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(31,41,55,0.10);
+  vertical-align: top;
+}
+th{
+  background: rgba(15,61,87,0.10);
+  text-align: left;
+}
+
+/* Optional: make the top lines (name/title) stand out */
+strong{
+  color: #0a2b3d;
+}
+
+/* Small screens */
+@media (max-width: 640px){
+  html, body{ font-size: 16.5px; }
+  h1{ font-size: 1.7em; }
+  h2{ font-size: 1.35em; }
+  .markdown-body, main{ padding: 18px 14px; }
+}
